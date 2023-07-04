@@ -16,12 +16,12 @@ class CoinToss extends Component {
     console.log(toss)
     this.setState({toss: Math.floor(Math.random() * 2)})
     if (toss === 0) {
-      this.setState(prevState => ({heads: prevState.total + 1}))
+      this.setState(prevState => ({heads: prevState.heads + 1}))
       this.setState({
         img: 'https://assets.ccbp.in/frontend/react-js/heads-img.png',
       })
     } else {
-      this.setState(prevState => ({tails: prevState.total + 1}))
+      this.setState(prevState => ({tails: prevState.tails + 1}))
       this.setState({
         img: 'https://assets.ccbp.in/frontend/react-js/tails-img.png',
       })
